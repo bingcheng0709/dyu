@@ -1,0 +1,471 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #005f73;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #94d2bd; /* 滑鼠移過時文字變色 */
+    transform: scale(1.1); /* 放大效果 */
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #94d2bd;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* 滑鼠移過時出現底線 */
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+}
+
+.nav-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+    color: #94d2bd; /* 滑鼠移過變色 */
+}
+
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    max-width: 2000px; /* 設置最大寬度，與網站格式保持一致 */
+    margin: 0 auto; /* 居中橫幅 */
+    height: 400px; /* 設置橫幅高度 */   
+    position: relative; /* 為添加遮罩做準備 */
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直置中內容 */
+    align-items: center; /* 水平置中內容 */
+    background: linear-gradient(to right, #005f73, #0a9396);
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    background-image: url('photo/S__6553614.jpg'); /* 替換為你的圖片路徑 */
+    background-size: cover; /* 確保圖片覆蓋整個區域 */
+    background-position: center; /* 圖片居中顯示 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+    overflow: hidden; /* 隱藏超出部分 */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 添加半透明黑色遮罩 */
+    z-index: 1; /* 確保遮罩層在圖片上方 */
+}
+
+.hero h1,
+.hero p,
+.hero button {
+    position: relative; /* 保持文字內容在遮罩層上方 */
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 增加文字陰影 */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* 增加文字陰影 */
+}
+
+.hero button {
+    padding: 0.8rem 1.5rem;
+    background: #94d2bd;
+    color: #005f73;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero button:hover {
+    background: #3d405b;
+    color: white;
+}
+
+/* Section Styles */
+.about-section, .contact-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #f0f9f4;
+}
+
+.about-section h2, .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards Container */
+.content {
+    padding: 3rem 1rem;
+    text-align: center;
+    background: #e9ecef;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h3 {
+    color: #005f73;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: #005f73;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 100%;
+    flex-direction: column; /* 垂直排列內容 */
+    align-items: center; /* 水平置中所有內容 */
+    justify-content: center; /* 垂直置中內容 */
+    gap: 1rem; /* 增加段落之間的間距 */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-content div {
+    text-align: center;
+}
+
+.footer-logo h3 {
+    font-size: 1.8rem;
+}
+
+.footer-contact, .footer-social {
+    font-size: 1rem;
+}
+
+.footer-contact a, .footer-social a {
+    color: #94d2bd;
+    text-decoration: none;
+}
+
+.footer-contact a:hover, .footer-social a:hover {
+    color: #e9ecef;
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+/* Cookie 使用同意通知 */
+.cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-consent p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.cookie-consent a {
+    color: #94d2bd;
+    text-decoration: underline;
+}
+
+.cookie-consent button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cookie-consent button:hover {
+    background: #45a049;
+}
+
+.cookie-consent.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* 動畫用初始狀態 */
+    transition: opacity 0.3s ease;
+    overflow: hidden; /* 隱藏滾動條，僅內容部分滾動 */
+}
+
+.modal.show {
+    display: flex; /* 顯示模態框 */
+    opacity: 1; /* 完全可見 */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease; /* 顯示動畫 */
+    overflow-y: auto; /* 垂直方向滾動 */
+}
+
+.modal-content.hide {
+    animation: slideOut 0.3s ease; /* 隱藏動畫 */
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 80px; /* 增加寬度以容納四個字 */
+    height: 80px; /* 確保高度一致 */
+    background: #005f73;
+    color: white;
+    border: none;
+    border-radius: 50%; /* 圓形 */
+    font-size: 0.9rem; /* 縮小字體以適應框 */
+    text-align: center;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* 預設隱藏 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    line-height: normal; /* 重設 line-height，避免干擾 */
+}
+
+#back-to-top:hover {
+    background: #0a9396;
+    transform: scale(1.1); /* 放大效果 */
+}
+
+/* Section 樣式 */
+.section {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #005f73;
+}
+
+.section p, .section ul {
+    font-size: 1rem;
+    color: #333;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+
+/* Grid 用於 SDGs 目標卡片 */
+.sdgs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sdg-card img {
+    width: 80px; /* 設定圖片的寬度 */
+    height: 80px; /* 設定圖片的高度 */
+    object-fit: contain; /* 確保圖片保持比例 */
+    margin-bottom: 0.5rem; /* 圖片與文字之間的間距 */
+    border-radius: 10%; /* 圖片設為圓形，根據需求可移除 */
+}
+
+.sdg-card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #005f73;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sdg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+.sdg-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color:#f0f9f4
+}
+
+.sdg-card p {
+    font-size: 1rem;
+    color: #f0f9f4;
+}
+
+/* 顯示動畫 */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 隱藏動畫（可選） */
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
