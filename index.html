@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>綠屋頂植物知識牆</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 固定導航欄 -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#" onclick="scrollToTop()">綠屋頂植物知識牆</a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="sdgs.html">了解SDGs</a></li>
+            <li><a href="#about">關於我們</a></li>
+            <li><a href="#topics">主要主題</a></li>
+            <li><a href="https://www.dyu.edu.tw/">大葉首頁</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero 橫幅區塊 -->
+    <header class="hero">
+        <h1>綠屋頂植物知識牆</h1>
+        <p>探索植物的秘密：從樹木、葉子到生藥，感受綠色的生命力！</p>
+        <br />
+        <button onclick="scrollToSection('topics')">開始探索</button>
+    </header>
+
+    <!-- 關於我們 -->
+    <section id="about" class="about-section">
+        <h2>關於我們</h2>
+        <p>大葉SDGs大自然綠教室，在綠屋頂機車棚旁，我們建置了一系列的綠屋頂植物知識牆。讓我們一起探索植物的結構和生長特性，了解它們如何在大自然中發揮著不可或缺的作用。</p>
+    </section>
+
+    <!-- 主題區域 -->
+<main id="topics" class="content">
+    <h2>主要主題</h2>
+    <br />
+    <br />
+    <div class="cards-container">
+        <!-- 森林碳風險卡片 -->
+        <div class="card" onclick="openModal('modal1')">
+            <img src="photo/掃描的文件_page-0001.jpg" alt="森林碳風險">
+            <div class="card-content">
+                <h3>森林碳險</h3>
+                <p>探索植物如何通過光合作用吸收碳並釋放氧氣，參與碳循環。</p>
+            </div>
+        </div>
+        <!-- 根的類型與果實種子卡片 -->
+        <div class="card" onclick="openModal('modal2')">
+            <img src="photo/掃描的文件_page-0002.jpg" alt="根的類型與果實種子">
+            <div class="card-content">
+                <h3>根的類型與果實種子</h3>
+                <p>了解根系的多樣性以及植物種子的傳播方式。</p>
+            </div>
+        </div>
+
+        <!-- 植物橫切面觀 -->
+        <div class="card" onclick="openModal('modal3')">
+            <img src="photo/掃描的文件_page-0003.jpg" alt="植物橫切面觀">
+            <div class="card-content">
+                <h3>植物橫切面面觀</h3>
+                <p>了植物的主要結構在橫切面上的組成，包括根、莖、葉和種子的橫切結構。</p>
+            </div>
+        </div>
+
+        <!-- 樹木的生長 -->
+        <div class="card" onclick="openModal('modal4')">
+            <img src="photo/掃描的文件_page-0004.jpg" alt="樹木的生長">
+            <div class="card-content">
+                <h3>樹木的生長</h3>
+                <p>這張圖片展示了樹木作為地球上最大的生物之一，其生長的過程與結構特徵。樹木的生長分為一次生長（延長生長）和二次生長（肥大生長）。
+
+                </p>
+            </div>
+        </div>
+
+        <!-- 生藥與香草 -->
+        <div class="card" onclick="openModal('modal5')">
+            <img src="photo/掃描的文件_page-0005.jpg" alt="生藥與香草">
+            <div class="card-content">
+                <h3>生藥與香草</h3>
+                <p>生藥與香草讓人更直觀地了解自然界的醫藥寶庫。透過這些植物，我們可以在健康管理、生活保健以及環境保護中找到靈感。</p>
+            </div>
+        </div>
+
+        <!-- 莖與花的類型 -->
+        <div class="card" onclick="openModal('modal6')">
+            <img src="photo/掃描的文件_page-0006.jpg" alt="莖與花的類型">
+            <div class="card-content">
+                <h3>莖與花的類型</h3>
+                <p>了植物的主要結構在橫切面上的組成，包括根、莖、葉和種子的橫切結構。</p>
+            </div>
+        </div>
+
+        <!-- 葉子的各種型態 -->
+        <div class="card" onclick="openModal('modal7')">
+            <img src="photo/掃描的文件_page-0007.jpg" alt="葉子的各種型態">
+            <div class="card-content">
+                <h3>葉子的各種型態</h3>
+                <p>透過認識葉子的型態，可以更好地識別植物種類，了解植物的適應性與演化。這不僅是對植物學的入門探索，也是體會自然多樣性的重要一步。</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <p>指導單位 : 大葉大學高教深耕計畫</p>
+                <p>主辦單位：大葉大學D無窮學院 數位科技微學程</p>
+            </div>
+            <div class="footer-logo">
+                <h3>綠屋頂植物知識牆</h3>
+                <p>大葉大學 SDGs 大自然綠教室</p>
+            </div>
+            <div class="footer-contact">
+                <h4>聯絡我們</h4>
+                <p>地址: <a href="https://maps.app.goo.gl/6MSwxHj9gxfYVs8N9">515006 彰化縣大村鄉學府路168號</a></p>
+                <p>電話: <a href="048511888">04-8511888</a></p>
+            </div>
+            <div class="footer-social">
+                <h4>關注我們</h4>
+                <a href="https://www.facebook.com/dayeh.tw/" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 綠屋頂植物知識牆 | 大葉大學 SDGs 大自然綠教室. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie 使用同意通知 -->
+    <div id="cookie-consent" class="cookie-consent hidden">
+        <span class="close" onclick="closeCookieConsent()">&times;</span>
+        <p>我們使用 Cookies 來提升您的網站體驗。<a href="cookies-privacy.html" target="_blank">了解更多</a></p>
+        <button onclick="acceptCookies()">接受</button>
+    </div>
+
+    <!-- 模態框 -->
+<!-- 模態框 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal1-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal1-image')">-</button>
+            <img id="modal1-image" src="photo/掃描的文件_page-0001.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>森林碳險</h3>
+        <p align="left"> <b>植物生長與碳循環：<br /></b>
+            <br />
+            森林通過光合作用吸收二氧化碳（CO₂），將其轉化為葡萄糖與氧氣，儲存在植物體內，從而實現大氣中碳的封存與循環。
+            世界森林每年吸收約 156 億噸二氧化碳，對調節全球氣候具有關鍵作用。<br />
+            <br />
+
+            <b>碳封存的互動過程：<br /></b>
+            <br />
+            森林通過生長吸收碳，經火災和枯萎等過程釋放碳，形成「碳收存」與「碳釋放」的動態平衡。
+            森林中的碳封存量約有 50% 存於地下（根部與土壤）。
+            <br />
+            <br />
+            <b>良性碳循環系統：<br /></b>
+            <br />
+            健康森林將碳封存在木材和其他生物量中，透過木材再利用和生態循環，促進整體碳排放減少。
+            <br />
+            <br />
+            <b>惡性碳循環系統：<br /></b>
+            <br />
+            
+            化石燃料的使用導致大量二氧化碳排放，超出自然系統的吸收能力，進一步加劇全球暖化。
+            <br />
+            <br />
+            <b>森林碳捕捉的重要性：<br /></b>
+            <br />
+            隨森林成熟，碳封存量逐漸達到頂峰並穩定釋放。
+            森林枯死和災害的威脅會導致碳封存能力下降，因此保護森林至關重要。</p>
+    </div>
+</div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal2-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal2-image')">-</button>
+            <img id="modal2-image" src="photo/掃描的文件_page-0002.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>根的類型與果實種子</h3>
+        <p align="left"><b>根的分類：</b>
+            <br />
+            根系的類型：分為鬚根系和直根系。<br />
+            <br />
+            <b>鬚根系</b>：主根不發達或消失，由眾多側根組成。
+            <br />
+            <b>直根系</b>：具有明顯的主根，且由主根分枝形成側根。
+            <br />
+            <br />
+            不一樣的根，根的形態多樣，依功能不同分為以下類型：<br />
+            <br />
+            <b>儲藏根</b>（如胡蘿蔔）<br />
+            <b>氣生根</b>（如榕樹）<br />
+            <b>呼吸根</b>（如落羽松）<br />
+            <b>支柱根</b>（如玉米）<br />
+            <b>繩狀根</b>（如常春藤）<br />
+            <b>水生根</b>（如青萍）<br />
+            <br />
+            <br />
+            <b>種子與果實的傳播方式：</b>
+            <br />
+            <br />
+            <b>傳播方式：<br /></b>
+            <br />
+            <b>風力吹送</b>（如蒲公英）<br />
+            <b>隨水漂流</b>（如椰子）<br />
+            <b>瞬間彈力</b>（如油菜）<br />
+            <b>動物運送</b>（如堅果）<br />
+            <br />
+            <br />
+            <b>果實與種子的分類：</b><br />
+            <b>堅果</b>（如橡實）<br />
+            <b>翅果</b>（如台灣欒樹）<br />
+            <b>聚花果</b>（如覆盆子）<br />
+            <b>聚合果</b>（如草莓）<br />
+            <br />
+            <b>果實的多樣性與代表：</b><br />
+            
+            果實根據形態和結構可細分為核果（如桃子）、瘦果（如蒲公英）、聚合果（如草莓）等，展示了自然界中的豐富變化。
+            </p>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal3-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal3-image')">-</button>
+            <img id="modal3-image" src="photo/掃描的文件_page-0003.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>植物橫切面面觀</h3>
+        <p align="left"><b>根橫切面：</b>
+            <br />
+            <br />
+            單子葉植物：環狀相間排列的維管束結構，見於玉米根的橫切面。
+            雙子葉植物：輻射相間排列的維管束結構，見於高山杜鵑根的橫切面。
+            根的結構包含皮層、內皮、木質部和韌皮部，負責吸收水分和養分，並支持植物生長。
+            <br />
+            <br />
+            <b>莖橫切面：</b>
+            <br />
+            <br />
+            
+            單子葉植物：由表皮、基本組織和維管束組成，維管束分佈呈散生狀態。
+            雙子葉植物草本：維管束環狀排列，外側是韌皮部，內側是木質部。
+            雙子葉植物木本：由樹皮、形成層和木材構成，年輪反映了環境的季節性變化。
+            <br />
+            <br />
+            <b>葉的剖面：</b><br />
+            <br />
+            組織結構：
+            上表皮和下表皮：保護葉片。
+            葉肉組織：包含海綿組織和柵狀組織，負責光合作用。
+            氣孔：進行氣體交換。
+            保衛細胞調節氣孔的開合，確保植物正常代謝。
+            <br />
+            <br />
+            <b>種子的剖面：</b>
+            
+            單子葉植物（如玉米）：包含胚乳、種皮和胚（胚根、胚芽、胚軸）。
+            雙子葉植物（如豆類）：包含胚根、胚芽和子葉，子葉提供養分支持。
+            </p>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal4-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal4-image')">-</button>
+            <img id="modal4-image" src="photo/掃描的文件_page-0004.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>樹木的生長</h3>
+        <p align="left">樹木的生長方式：
+            <br />
+            <br />
+            <b>一次生長（延長生長）：</b>
+            <br />
+            <br />
+            由頂端生長點（藍頂分生組織）負責，在植物生長素（Auxin）的引導下促進細胞分裂和體積增長。
+            使樹木的枝條和根每年不斷向外延伸，形成葉、花等結構。
+            <br />
+            <br />
+            <b>二次生長（肥大生長）：</b>
+            由維管形成層促進層狀細胞的分裂，向內形成木質部，向外形成韌皮部。
+            使樹幹不斷變粗，同時促進輸導系統的更新與增強。
+            <br />
+            <br />
+            <b>輸導系統：</b>
+            <br />
+            <br />
+            包括心材、木質部、韌皮部。
+            心材：位於樹中心的深色區域，由死亡細胞組成，負責提供結構支持。
+            木質部：負責水分和養分的垂直運輸。<br />
+            韌皮部：負責有機養分（如光合作用產物）的運輸。<br />
+            <br />
+            <b>樹皮的功能：</b><br />
+            <br />
+            樹皮是樹木的重要動脈，保護內部輸導組織，並作為運輸養分和水分的主要通道。
+            一旦樹皮受到嚴重破壞，可能導致樹幹死亡，進一步影響整株樹木的生命力。<br />
+            <br />
+            <b>芽與枝的分化：</b><br />
+            <br />
+            <br />
+            <b>定芽：</b><br />
+            <br />
+            頂芽和側芽皆為「定芽」，控制樹枝和樹幹的向上和向外延伸。<br />
+            <br />
+            <b>不定芽：</b><br />
+            <br />
+            當樹枝受傷或死亡時，由樹的其他部分產生不定芽，補充原有結構。<br />
+            <br />
+            <b>分化結果：</b><br />
+            <br />
+            形成結構芽（負責延長樹枝）和非結構芽（應對環境壓力）。
+            <br />
+            </p>
+    </div>
+</div>
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal5-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal5-image')">-</button>
+            <img id="modal5-image" src="photo/掃描的文件_page-0005.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>生藥與香草</h3>
+        <p align="left"> <b>1.生物鹼 (Alkaloids)</b><br />
+            特徵： <b>通常具有強烈的生理活性。</b><br />
+            <br />
+            <b>代表植物及用途：</b><br />
+            <b>黃連</b>： 幫助小腸健康，緩解炎症。<br />
+            <b>罌粟</b>： 止痛鎮靜。<br />
+            <b>咖啡</b>： 提神，改善專注力。<br />
+            <b>胡椒</b>： 促進消化，增進食慾。<br />
+            <b>枸杞</b>： 改善視力，強化免疫力。<br />
+            <br />
+            2. <b>類苯丙烷 (Phenylpropanoids)</b><br />
+            特徵： <b>含有抗氧化作用，延緩衰老。</b><br />
+            <br />
+            <b>代表植物及用途：</b><br />
+            <b>肉桂：</b> 提升免疫力，促進血液循環。<br />
+            <b>紫蘇：</b> 防過敏，提升食慾。<br />
+            <b>五味子：</b> 幫助肝臟健康。<br />
+            <b>土當歸：</b> 舒緩經痛，促進血液循環。<br />
+            <b>蓮翹：</b> 具抗菌消炎的效果。<br />
+            <br />
+            3. <b>類黃酮類 (Flavonoids)</b><br />
+            特徵： <b>抗氧化及抗炎作用，對心血管健康有益。</b><br />
+            <br />
+            代表植物及用途：<br />
+            <b>迷迭香：</b> 提神，延緩老化。<br />
+            <b>山楂：</b> 改善消化，促進血液循環。<br />
+            <b>葛根：</b> 緩解高血壓，提升免疫力。<br />
+            <b>洋甘菊：</b> 放鬆身心，幫助睡眠。<br />
+            <b>陳皮：</b> 化痰止咳，幫助消化。<br />
+            <br />
+            4. <b>蒽醌類 (Anthraquinone)</b><br />
+            特徵： <b>具有通便及抗菌作用。</b><br />
+            <br />
+            代表植物及用途：<br />
+            <b>決明子：</b> 幫助通便，改善視力。<br />
+            <b>番瀉葉：</b> 通便清腸。<br />
+            <b>何首烏：</b> 補腎養血，強化頭髮健康。<br />
+            <br />
+            5. <b>萜烯類 (Terpenoids)</b><br />
+            特徵： <b>抗菌、抗炎，對呼吸道健康有幫助。</b><br />
+            <br />
+            代表植物及用途：<br />
+            <b>薄荷：</b> 緩解頭痛，清新口氣。<br />
+            <b>香茅：</b> 驅蚊，消毒抗菌。<br />
+            <b>枸杞：</b> 增強免疫力，補腎。<br />
+            <b>艾草：</b> 消炎止癢。<br />
+            <br />
+            6. <b>精油 (Essential Oils)</b><br />
+            特徵： <b>揮發性高，具有芳香療效。</b><br />
+            <br />
+            代表植物及用途：<br />
+            <b>薰衣草：</b> 鎮靜助眠。<br />
+            <b>薄荷：</b> 提神，改善消化。<br />
+            <b>小茴香：</b> 促進消化，緩解腹脹。<br />
+            <br />
+            7. <b>甾體皂苷 (Steroidal Saponins)</b><br />
+            特徵： <b>幫助維持免疫系統，具有抗氧化和抗炎作用。</b><br />
+            <br />
+            代表植物及用途：<br />
+            <b>柴胡：</b> 消炎退燒。<br />
+            <b>紅景天：</b> 提高耐力，緩解疲勞。<br />
+            <b>刺五加：</b> 提升免疫力，促進身體恢復。<br />
+            </p>
+    </div>
+</div>
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal6-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal6-image')">-</button>
+            <img id="modal6-image" src="photo/掃描的文件_page-0006.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>莖與花的類型</h3>
+        <p align="left"><b>根橫切面：</b><br />
+            <br />
+            <b>單子葉植物：</b>環狀相間排列的維管束結構，見於玉米根的橫切面。<br />
+            <b>雙子葉植物：</b>輻射相間排列的維管束結構，見於高山杜鵑根的橫切面。<br />
+            根的結構包含皮層、內皮、木質部和韌皮部，負責吸收水分和養分，並支持植物生長。<br />
+            <br />
+            <b>莖橫切面：</b><br />
+            <br />
+            <b>單子葉植物：</b>由表皮、基本組織和維管束組成，維管束分佈呈散生狀態。<br />
+            <b>雙子葉植物草本：</b>維管束環狀排列，外側是韌皮部，內側是木質部。<br />
+            <b>雙子葉植物木本：</b>由樹皮、形成層和木材構成，年輪反映了環境的季節性變化。<br />
+            <br />
+            <b>葉的剖面：</b><br />
+            <br />
+            <b>組織結構：</b>
+            上表皮和下表皮：保護葉片。<br />
+            <b>葉肉組織：</b>包含海綿組織和柵狀組織，負責光合作用。<br />
+            <b>氣孔：</b>進行氣體交換。<br />
+            保衛細胞調節氣孔的開合，確保植物正常代謝。<br />
+            <br />
+            <b>種子的剖面：</b><br />
+            <br />
+            <b>單子葉植物（如玉米）：</b>包含胚乳、種皮和胚（胚根、胚芽、胚軸）。<br />
+            <b>雙子葉植物（如豆類）：</b>包含胚根、胚芽和子葉，子葉提供養分支持。<br />
+            </p>
+    </div>
+</div>
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal7')">&times;</span>
+        <div class="image-container">
+            <button class="zoom-button" onclick="zoomImage('in', 'modal7-image')">+</button>
+            <button class="zoom-button" onclick="zoomImage('out', 'modal7-image')">-</button>
+            <img id="modal7-image" src="photo/掃描的文件_page-0007.jpg" alt="森林碳風險大圖" class="modal-image">
+        </div>
+        <h3>葉子的各種型態</h3>
+        <p align="left"><b>葉脈</b>
+            <br />
+            <br />
+            葉脈的排列方式是辨別植物葉片的一大特徵。
+            <br />
+            <br />
+            <b>主要類型：</b>
+            <br />
+            <br />
+            <b>平行脈：</b>葉脈平行排列，如禾本科植物的葉片。
+            <br />
+            <b>網狀脈：</b>葉脈交織成網狀，如雙子葉植物的葉片。
+            <br />
+            <br />
+            <b>葉序</b><br />
+            <br />
+            葉片在莖或枝條上的排列方式：<br />
+            <br />
+            <b>互生葉序：</b>葉片交替排列。<br />
+            <b>對生葉序：</b>葉片成對排列。<br />
+            <b>輪生葉序：</b>三片以上葉片圍繞節點排列。<br />
+            <b>叢生葉序：</b>葉片聚集在莖的同一節點。<br />
+            <br />
+            <b>單葉與複葉</b><br />
+            <br />
+            <b>單葉：</b>每片葉子是一個單獨的結構。<br />
+            <b>複葉：</b>葉片由多個小葉構成。<br />
+            <br />
+            <b>主要類型：</b><br />
+            <br />
+            <b>掌狀複葉：</b>如草本植物的葉子。<br />
+            <b>羽狀複葉：</b>如蕨類植物的羽狀排列。<br />
+            <br />
+            <b>葉形</b><br />
+            <br />
+            葉片的形狀多種多樣，常見類型包括：<br />
+            <br />
+            <b>針形：</b>細長的形狀，如松樹葉。<br />
+            <b>線形：</b>葉片呈細長條。<br />
+            <b>卵形與倒卵形：</b>形似雞蛋或倒轉雞蛋。<br />
+            <b>圓形與心形：</b>葉片呈圓形或心臟形狀。<br />
+            
+            </p>
+    </div>
+</div>
+
+    <!-- 其他模態框結構相似 -->
+    <script src="script.js"></script>
+
+    <!-- 回到最上頁按鈕 -->
+    <button id="back-to-top" onclick="scrollToTop()">↑ 回到頂部</button>
+
+</body>
+</html>
